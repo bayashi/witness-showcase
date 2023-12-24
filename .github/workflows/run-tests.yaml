@@ -44,6 +44,7 @@ jobs:
       - name: Install irir
         run: |
           go install github.com/bayashi/irir@latest
+          mkdir -p $HOME/.config/irir
           cp -f .irir-config.yaml `irir --dump-config-path`
 
       - name: Test with the Go CLI
