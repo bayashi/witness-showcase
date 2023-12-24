@@ -47,6 +47,7 @@ jobs:
           echo "foo bar baz hoge" | colr bar baz
 
       - name: Install irir
+        shell: 'script -q -e -c "bash {0}"'
         run: |
           go install github.com/bayashi/irir@latest
           mkdir -p $HOME/.config/irir
