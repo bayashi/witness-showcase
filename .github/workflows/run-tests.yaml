@@ -41,6 +41,11 @@ jobs:
       - name: Build
         run: go build -v ./...
 
+      - name: Install color
+        run: |
+          go install github.com/k1LoW/colr/cmd/colr@latest
+          echo "foo bar baz hoge" | colr bar baz
+
       - name: Install irir
         run: |
           go install github.com/bayashi/irir@latest
