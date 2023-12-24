@@ -40,6 +40,10 @@ gotest:
   match: "[no tests to run]"
   color: yellow
   target: word
+- type: match
+  match: "[no test files]"
+  color: yellow
+  target: word
 - type: regexp
   match: '[^\/]+\.go:\d+'
   color: cyan
@@ -56,4 +60,3 @@ gotest:
   match: "Actually got:"
   color: cyan
   target: line
-  
