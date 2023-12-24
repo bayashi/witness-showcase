@@ -48,4 +48,4 @@ jobs:
           cp -f .irir-config.yaml `irir --dump-config-path`
 
       - name: Test with the Go CLI
-        run: go test -v ./... | irir gotest
+        run: irir gotest -- go test -v ./...
