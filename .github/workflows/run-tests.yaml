@@ -41,19 +41,12 @@ jobs:
       - name: Build
         run: go build -v ./...
 
-      - name: Install color
-        run: |
-          go install github.com/k1LoW/colr@v1.1.1
-          echo "foo bar baz hoge" | colr bar baz
-
       - name: Install irir
-        shell: 'script -q -e -c "bash {0}"'
         run: |
           go install github.com/bayashi/irir@latest
           mkdir -p $HOME/.config/irir
           cp -f .irir-config.yaml `irir --dump-config-path`
-          cat `irir --dump-config-path`
-          echo "Actually got:	123" | irir gotest
 
       - name: Test with the Go CLI
+        shell: 'script -q -e -c "bash {0}"'
         run: irir gotest -- go test -v ./...
