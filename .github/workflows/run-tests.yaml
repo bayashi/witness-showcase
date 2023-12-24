@@ -51,6 +51,7 @@ jobs:
           go install github.com/bayashi/irir@latest
           mkdir -p $HOME/.config/irir
           cp -f .irir-config.yaml `irir --dump-config-path`
+          cat `irir --dump-config-path`
           echo "Actually got:	123" | irir gotest
 
       - name: Test with the Go CLI
