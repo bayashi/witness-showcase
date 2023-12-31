@@ -45,7 +45,7 @@ jobs:
         run: |
           go install github.com/bayashi/irir@latest
           mkdir -p $HOME/.config/irir
-          curl -L https://gist.githubusercontent.com/bayashi/a4f74aa6a55733f798eaf9caa7cbc6d4/raw/ab8fdd04dd4edf824b2831f285f696a924580b56/irir-config-gotest.yaml > $HOME/.config/irir/irir_rule.yaml
+          curl -L https://gist.githubusercontent.com/bayashi/a4f74aa6a55733f798eaf9caa7cbc6d4/raw/ee1c0d9460ac7e4b94a85c8614d932074c4b5c61/irir-config-gotest.yaml > $HOME/.config/irir/irir_rule.yaml
 
       - name: Test with the Go CLI
         shell: 'script -q -e -c "bash {0}"'
